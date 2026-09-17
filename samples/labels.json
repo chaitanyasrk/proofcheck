@@ -1,0 +1,141 @@
+[
+  {
+    "file": "01_clean_diecut.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [],
+    "why": "300 DPI, transparent, centered"
+  },
+  {
+    "file": "02_lowres_diecut.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [
+      "low_resolution"
+    ],
+    "why": "150 DPI will print soft"
+  },
+  {
+    "file": "03_art_touches_edge.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [
+      "unsafe_margin"
+    ],
+    "why": "circle runs into the cut line"
+  },
+  {
+    "file": "04_white_box.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [
+      "opaque_background"
+    ],
+    "why": "white box will print around the design"
+  },
+  {
+    "file": "05_lowres_and_edge.png",
+    "width_in": 2,
+    "height_in": 2,
+    "cut": "die_cut",
+    "expected": [
+      "low_resolution",
+      "unsafe_margin"
+    ],
+    "why": "150 DPI and art at the edge"
+  },
+  {
+    "file": "06_square_full_bleed.png",
+    "width_in": 3,
+    "height_in": 2,
+    "cut": "square",
+    "expected": [],
+    "why": "full bleed is fine for square cut"
+  },
+  {
+    "file": "07_square_lowres.png",
+    "width_in": 3,
+    "height_in": 2,
+    "cut": "square",
+    "expected": [
+      "low_resolution"
+    ],
+    "why": "150 DPI"
+  },
+  {
+    "file": "08_faint_glow.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [],
+    "why": "glow at 2% opacity will not show in print"
+  },
+  {
+    "file": "09_shadow_box.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [
+      "opaque_background"
+    ],
+    "why": "semi-transparent box still prints as a box"
+  },
+  {
+    "file": "10_280dpi.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [],
+    "why": "280 DPI looks fine on a 3in sticker"
+  },
+  {
+    "file": "11_exact_300dpi.png",
+    "width_in": 4,
+    "height_in": 4,
+    "cut": "die_cut",
+    "expected": [],
+    "why": "exactly 300 DPI"
+  },
+  {
+    "file": "12_tall_lowres.png",
+    "width_in": 2,
+    "height_in": 4,
+    "cut": "die_cut",
+    "expected": [
+      "low_resolution"
+    ],
+    "why": "200 DPI"
+  },
+  {
+    "file": "13_small_mark_at_top.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [
+      "unsafe_margin"
+    ],
+    "why": "small mark will be cut through"
+  },
+  {
+    "file": "14_clean_rectangle.png",
+    "width_in": 2,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [],
+    "why": "rectangle with safe margin"
+  },
+  {
+    "file": "15_color_box.png",
+    "width_in": 3,
+    "height_in": 3,
+    "cut": "die_cut",
+    "expected": [
+      "opaque_background"
+    ],
+    "why": "yellow box around the design"
+  }
+]
